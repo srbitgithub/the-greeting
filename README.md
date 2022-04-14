@@ -1,4 +1,4 @@
-# EN
+# (en)
 ## Clone repository in local
 1. Copy this repository from GitHub to clone it
 2. Download repository using: **git clone** **_paste here from clipboard_**
@@ -12,7 +12,7 @@
 run test with: **npm run test**
 
 
-# Es
+# (es)
 ## Para clonar el repositorio en local
 1. Copia el link de este repositorio desde GitHub para clonarlo
 2. Descarga el repositorio usando: **git clone** **_pega aquí el contenido de tu clipboard_**
