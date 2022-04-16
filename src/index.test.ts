@@ -29,4 +29,11 @@ describe("The Greeting", () => {
     expect(greeting.result).toEqual(expected);
   })
 
+  it("returns the greeting with two names when received argument is an array with two names", () => {
+    const expected = 'Hello Rocky and Rambo';
+    const greeting = new Greeting(['Rocky', 'Rambo']);
+    console.clear()
+    expect(greeting.result).toEqual(expected);
+  })
+
 })
