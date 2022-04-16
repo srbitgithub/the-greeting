@@ -35,8 +35,13 @@ export class Greeting {
   }
 
   textToReturnLowerCase(arrayNames:string[]):string{
+    //console.log(arrayNames)
+    let item:string = ''
+    let variousItems: string[] = []
     let textToReturn:string = "Hello"
     for (let i:number = 0; i < arrayNames.length - 1; i++){
+      //item = arrayNames[i]
+      //console.log('item: ' + item)
       textToReturn = textToReturn + ", " + arrayNames[i]
     }
     textToReturn = textToReturn + " and " + arrayNames[arrayNames.length - 1]
@@ -57,15 +62,31 @@ export class Greeting {
   separateByUpperCaseAndLowerCase(){
     let IS_UPPERCASE:boolean = true
     let IS_LOWERCASE:boolean = false
+    let continueProgram:boolean = true
 
     const lowerCaseStrings:string[] = []
     const upperCaseStrings:string[] = []
 
     let textToSetInResult:string = ''
 
+    let multipleNames:string[] = []
+
     this.receivedArrayNames.forEach(item => {
-      if (item === item.toUpperCase()) upperCaseStrings.push(item)
-      else lowerCaseStrings.push(item)
+      if (item.includes(',')){
+        multipleNames = item.split(',')
+        multipleNames.forEach(element => {
+          if (element.substring(0,1) === " ") element = element.substring(1)
+          if (element === element.toUpperCase()) upperCaseStrings.push(element)
+          else lowerCaseStrings.push(element)
+        });
+        continueProgram = false
+      }
+      if (continueProgram)
+      {
+        if (item === item.toUpperCase()) upperCaseStrings.push(item)
+        else lowerCaseStrings.push(item)
+      }
+      continueProgram = true
     });
     if (lowerCaseStrings.length > 0) textToSetInResult = textToSetInResult + this.textToReturnLowerCase(lowerCaseStrings)
     if (upperCaseStrings.length > 0) textToSetInResult = textToSetInResult + this.textToReturnUpperCase(upperCaseStrings)
