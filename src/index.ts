@@ -1,4 +1,4 @@
-export function test(): any {
+export function greeting(): any {
     return "That works fine"
   };
   

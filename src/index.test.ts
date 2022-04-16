@@ -1,10 +1,10 @@
-import { test } from "./index"
+import { greeting } from "./index"
 
-describe("Kata-TS", () => {
+describe("The Greeting", () => {
   it("returns 'That works fine'", () => {
     const expected = "That works fine";
 
-    const result = test();
+    const result = greeting();
 
     expect(result).toEqual(expected);
   })
