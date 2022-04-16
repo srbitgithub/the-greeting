@@ -9,6 +9,7 @@ export class Greeting {
   }
   main(){
     this.result = `Hello ${this.receivedName}`
+    if (this.receivedName === this.receivedName.toUpperCase()) this.result = this.result.toUpperCase()
   }
 };
   

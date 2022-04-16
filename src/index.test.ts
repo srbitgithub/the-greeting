@@ -22,4 +22,11 @@ describe("The Greeting", () => {
     expect(greeting.result).toEqual(expected);
   })
 
+  it("returns the greeting in upperCase when received argument is upperCase", () => {
+    const expected = 'HELLO RAMBO';
+    const greeting = new Greeting('RAMBO');
+    console.clear()
+    expect(greeting.result).toEqual(expected);
+  })
+
 })
