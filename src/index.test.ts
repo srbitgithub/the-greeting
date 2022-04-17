@@ -58,18 +58,16 @@ describe("The Greeting", () => {
   })
 
   it("If item in array contain comma, then separate it in differents elements", () => {
-    //console.clear()
+    console.clear()
     const expected = 'Hello, Conan, Rambo and Superman. AND HELLO, ROCKY AND DANDIE';
     const greeting = new Greeting(['Conan', 'ROCKY', 'Rambo, Superman', 'DANDIE']);
     expect(greeting.result).toEqual(expected);
   })
 
   it("If item in array contain comma, then separate it in differents elements", () => {
-    //console.clear()
+    console.clear()
     const expected = 'Hello, Conan, Rambo and Superman. AND HELLO, ROCKY, DANDIE AND JHON';
     const greeting = new Greeting(['Conan', 'ROCKY', 'Rambo, Superman', 'DANDIE, JHON']);
     expect(greeting.result).toEqual(expected);
   })
-
-
 })
